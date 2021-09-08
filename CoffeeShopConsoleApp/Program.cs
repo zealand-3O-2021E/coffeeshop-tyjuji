@@ -18,7 +18,6 @@ namespace CoffeeShopConsoleApp
 
             };
 
-
             foreach (var coffee in orderList)
             {
                 Console.WriteLine("A " + coffee.Name() + " has a strength of " + coffee.Strength() +
@@ -38,8 +37,14 @@ namespace CoffeeShopConsoleApp
                 Console.WriteLine("A " + ((Coffee)coffee).Name() + " contains " + coffee.mlMilk() + " mLs of milk.");
             }
 
-
-
+            try
+            {
+                _ = new Latte(9001);
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                Console.WriteLine("Discount exception caught.");
+            }
         }
     }
 }
