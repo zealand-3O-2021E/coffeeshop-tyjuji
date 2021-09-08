@@ -6,8 +6,18 @@ using System.Threading.Tasks;
 
 namespace CoffeeShopConsoleApp
 {
-    class Cortado : Coffee
+    class Cortado : Coffee, IMilk
     {
+        public int mlMilk()
+        {
+            return 40;
+        }
+
+        public override string Name()
+        {
+            return "Cortado";
+        }
+
         public override int price()
         {
             return 25;

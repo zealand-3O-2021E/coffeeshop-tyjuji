@@ -19,6 +19,8 @@ namespace CoffeeShopConsoleApp
             return 20;
         }
 
+        public abstract string Name();
+
         public abstract string Strength();
 
     }
