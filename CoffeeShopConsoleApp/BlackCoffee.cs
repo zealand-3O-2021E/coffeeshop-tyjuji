@@ -8,6 +8,10 @@ namespace CoffeeShopConsoleApp
 {
     class BlackCoffee : Coffee
     {
+        public BlackCoffee(int discount) : base(discount)
+        {
+        }
+
         public override string Name()
         {
             return "Black Coffee";
